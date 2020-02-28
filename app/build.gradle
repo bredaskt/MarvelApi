@@ -1,0 +1,68 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+
+android {
+    compileSdkVersion 29
+    buildToolsVersion "29.0.2"
+
+    defaultConfig {
+        applicationId "com.bbreda.marvelapi"
+        minSdkVersion 17
+        targetSdkVersion 29
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+}
+
+ext {
+    kotlin_version = '1.3.30'
+    arch_comp_version = '1.1.1'
+    targetSdkVersion = 28
+    minSdkVersion = 18
+    compileSdkVersion = targetSdkVersion
+    buildToolsVersion = '28.0.0'
+    libVersionCode = 1
+    libVersionName = '1.0.0'
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation 'androidx.core:core-ktx:1.2.0'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'androidx.lifecycle:lifecycle-extensions:2.0.0'
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.0.0'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+
+    implementation "com.android.support:appcompat-v7:$buildToolsVersion"
+    implementation "com.android.support:animated-vector-drawable:$buildToolsVersion"
+    implementation "com.android.support:support-media-compat:$buildToolsVersion"
+    implementation "com.android.support:exifinterface:$buildToolsVersion"
+    implementation "com.android.support:design:$buildToolsVersion"
+    implementation "com.android.support:recyclerview-v7:$buildToolsVersion"
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+    implementation 'android.arch.lifecycle:extensions:1.1.1'
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.2.1'
+//Retrofit
+    implementation 'com.squareup.retrofit2:retrofit:2.3.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.3.0'
+    implementation 'com.squareup.okhttp3:logging-interceptor:3.8.0'
+    implementation 'com.github.bumptech.glide:glide:4.2.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.2.0'
+
+//Picasso
+    implementation "com.squareup.picasso:picasso:2.71828"
+}
