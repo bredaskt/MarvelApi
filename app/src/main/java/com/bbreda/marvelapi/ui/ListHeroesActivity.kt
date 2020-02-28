@@ -1,4 +1,4 @@
-package com.bbreda.marvelapi.ui_home
+package com.bbreda.marvelapi.ui
 
 import androidx.lifecycle.ViewModelProviders
 import android.os.Bundle

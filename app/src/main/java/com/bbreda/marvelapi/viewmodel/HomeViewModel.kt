@@ -9,7 +9,7 @@ import com.bbreda.marvelapi.api.OnGetMarvelCallback
 import com.bbreda.marvelapi.models.ReturnData
 import com.bbreda.marvelapi.repository.MarvelRepository
 import com.bbreda.marvelapi.repository.MarvelRepositoryImpl
-import com.bbreda.marvelapi.ui_home.HomeActivity
+import com.bbreda.marvelapi.ui.HomeActivity
 
 class HomeViewModel(private val repository: MarvelRepository = MarvelRepositoryImpl())
     : ViewModel() {

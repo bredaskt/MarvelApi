@@ -1,4 +1,4 @@
-package com.bbreda.marvelapi.ui_home
+package com.bbreda.marvelapi.ui
 
 import android.content.Intent
 import android.os.Bundle
